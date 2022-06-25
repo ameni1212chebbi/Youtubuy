@@ -1,0 +1,64 @@
+/*Cancel the transition effect from the card containing the video*/
+.card:hover {
+    transform: translateY(0%);
+}
+/*To make the icons parallel to the writing above them*/
+.watch-page .watch-icons {
+    position: absolute;/*Put icons at the bottom of the video*/
+    bottom: 5px;
+    right: 20px;
+}
+/*When hovering over icons*/
+.watch-icons i:hover {
+    cursor: pointer;
+ }
+ /*Hide the text that we will show and hide when the button is pressed*/
+ .watch-page #more {
+    display: none;
+}
+/*Hide the shadow that appears around the input field when pressed*/
+.form-control:focus {
+    box-shadow: none;
+}
+/*hide all responses*/
+.card-inner {
+    display: none;
+}
+/*Change the color of the comment buttons to match the colors of our site*/
+.public-comment .card .btn {
+    background-color: #921192;
+    border-color: #921192;
+    color: #fff;
+}
+.public-comment .card .btn:hover {
+    background-color: #b915b9;
+}
+/*Change the position of the time container*/
+time {
+    left: 24px !important;
+}
+/*Change the position of the play icon*/
+.watch-page .fa-play {
+    right: 46% !important;
+}
+/*Decrease the size of the element containing the duration of the video clip and the size of the play icon*/
+@media (min-width: 992px) {
+    time {
+        font-size: 13px;
+    }
+    .fa-play {
+        font-size: 20px !important;
+    }
+}
+@media (max-width: 1062px) {
+    /* Put a margin at the bottom of the button to avoid the icons below it */
+    #myBtn {
+        margin-bottom: 60px !important;
+    }
+}
+@media (max-width: 570px) {
+   /*Decrease the font size of the container containing the comment release time*/
+    .reply-time {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,37 @@
+/*Subscribe button format*/
+.channel-page .follow button {
+    color:#fff !important;
+    background-color: #bf40bf !important;
+}
+/*Cancel the transition effect from the card containing the video*/
+.channel-page .video-section .card:hover {
+    transform: translateY(0%);
+}
+/*Decrease the time container size*/
+time {
+    font-size: 13px;
+}
+/*Change the position of the play icons*/
+.channel-page .social-media {
+    bottom: 18px;
+    left: 20px;
+}
+/*Change the position of the subscribe button*/
+.channel-page .follow {
+    bottom: 18px;
+    right: 18px;
+}
+@media (max-width: 593px) {
+    /*Decrease the font size and annotation menu buttons to come in one row*/
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 13px;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}
+@media (min-width: 594px) {
+    .navbar-light .navbar-nav .nav-link {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}

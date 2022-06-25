@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "cairoFont";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+body {
+    font-family: "cairoFont", Arial, sans-serif;
+    background-color: #fafafa;
+}
+a {
+    color:#000;
+    text-decoration: none !important;
+}
+/*Change the default colors of all buttons on the site*/
+button {
+    background-color: transparent !important;
+    color: #bf40bf !important;
+    border-color: #bf40bf !important;
+}
+/*Changes the default colors of all buttons on the site when the mouse pointer is hovered over the button*/
+button:hover {
+    color: #fff !important;
+    background-color: #bf40bf !important;
+}
+/* We must set this property to the child "card body" because the card has a display value flex */
+.card-body {
+    min-width: 0;
+}
+.card .card-horizontal .card-body p {
+    white-space: nowrap;/*Prevent new line descent and just one line*/
+    overflow: hidden;/*Hide all information after the first line*/
+    text-overflow: ellipsis;/*Add the three dots at the end of the sentence*/
+}
+/*Change the color of the top menu*/
+#top-menu .bg-light {
+    background-color: #fff !important;
+}
+/*Circle the site logo icon*/
+#top-menu .video-icon {
+    background-color: #bf40bf;
+    color: #fff;
+    border-radius: 15%;
+}
+/*Change the color of hyperlinks when hovering over or clicking on the mouse*/
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active>.nav-link {
+    color: #fff;
+    background-color: #bf40bf;
+}
+/*Change the color of the login link*/
+.navbar .login {
+    color: #bf40bf;
+}
+/* change signal colors x*/
+.modal .modal-header .close:hover {
+    color: #bf40bf !important;
+    background-color: transparent !important;
+}
+/*Hide the shadow that appears around the search box and buttons when pressed*/
+input.form-control:focus,
+button:focus {
+    box-shadow: none !important;
+}
+.card .card-icons {
+    position: relative;
+}
+/*Determine the position of the time container*/
+time {
+    position: absolute;
+    bottom: 10px;
+    left: 7px;
+    color: #fff;
+    background-color: #000;
+    padding: 0px 3px;
+}
+/*Determine the position of the play icon*/
+.card .fa-play {
+    position: absolute;
+    top: 43%;
+    right: 45%;
+    color:#2c3131c7;
+    display: none;
+}
+.card:hover .fa-play {
+    display: inline;
+}
+.card:hover {
+    transform: translateY(-.9%);
+}
+.card {
+    transition: transform .5s;
+}
+.card .card-title {
+    height: 50px;
+    overflow: hidden;
+}
+#top-menu .fa-bars {
+    cursor: pointer;
+}
+/*Side Menu Format*/
+.sidebar {
+    position: fixed;
+    z-index: 4;
+    right: -17rem;
+    transition: all 0.5s ease-in-out;
+    height: 100%; /*list length*/
+    background-color: #fff;
+    overflow: hidden; /*Hide all items over 100 */
+    padding-bottom: 60px;
+}
+/*Show scrollbar vertically*/
+.sidebar:hover {
+    overflow-y: scroll;
+}
+/*Change the colors of the icons in the side menu*/
+.sidebar .purple {
+    color:#bf40bf;
+}
+/*Change the colors of menu items when the mouse pointer is hovered over the side menu*/
+.sidebar .list-group-item:hover {
+    color:#fff;
+    background-color: #bf40bf;
+}
+/*Change the color of the icons also when the mouse pointer is hovered over the side menu*/
+.sidebar .list-group-item:hover .purple {
+    color:#fff;
+}
+/* Increase the width of the side menu items */
+.sidebar .list-group-item {
+    width: 17rem;
+}
+/*Hide the side menu on first page load*/
+#wrap.toggled .sidebar {
+    right: 0rem;
+}
+/*Scroll bar background format*/
+.sidebar::-webkit-scrollbar {
+    background: rgb(230,230,230);
+    width: 8px;
+}
+/*Scrollbar format*/
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgb(179,179,179);
+    width:8px;
+}
+/*black layer*/
+.layer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    display: none;
+}
+.navbar .search-icon {
+    color: #bf40bf;
+    cursor: pointer;
+    padding: 15px 10px;
+    position: absolute;
+    top: 15px;
+    left: 132px;
+    display: none;
+}
+.navbar .search-icon:hover {
+    color: #fff;
+    background-color: #bf40bf;
+}
+/*The format of the input field that appears when you press the search icon*/
+.search-input {
+    position: fixed;
+    top: 72px;
+    border: none;
+    padding: 6px 23px;
+    height: 60px;
+    background-color: #efeeee;
+    display: none;
+    z-index: 1;
+}
+.search-input:focus {
+    background-color: #efeeee;
+}
+/*Delete spaces from the container to extend the search field across the entire screen*/
+.container-fluid {
+    padding: 0px;
+    overflow: hidden;
+}
+@media (max-width: 1115px) {
+   /*Hide the search field in the top menu*/
+    .navbar .collapse .form-inline {
+        display: none;
+    }
+    /*Show search icon*/
+    .navbar .search-icon {
+        display: inline;
+    }
+}
+/*Hide the search field that appears on medium and small screens*/
+@media (min-width: 1115px) {
+    .search-input {
+        display: none !important;
+    }
+}

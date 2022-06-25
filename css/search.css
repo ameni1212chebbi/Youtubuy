@@ -1,0 +1,47 @@
+/*Change the mouse pointer when hovering over the filter icon and writing next to it*/
+#search-filters-icon {
+    cursor: pointer;
+}
+/*hide filter list*/
+.search-header .filter-column {
+    display: none;
+}
+/*When selecting the checkbox, change its color*/
+input:checked+span {
+    color: #bf40bf;
+}
+/*Change the position of the container containing the duration of the video clip*/
+time {
+    bottom: 7px;
+    left: 29px;
+}
+@media (max-width: 767px) {
+   /* to span the entire container it contains */
+    .card .card-top-image {
+        width: 100%;
+    }
+    .card .card-horizontal time {
+        left: 10px;
+    }
+    .card .card-horizontal .fa-play {
+        right: 48%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    /*Show the container containing the channel name and logo on a single line*/
+    .card .card-horizontal .card-body .channel-img {
+        display: block;
+        margin-top: 10px;
+    }
+   /* Delete annotation from the right of the image*/
+    .card .card-horizontal .card-body .channel-img>img {
+        margin-right: 0px !important;
+    }
+    /*Hide text longer than two lines*/
+    h4 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; 
+    }
+}
